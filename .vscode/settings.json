@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "xlocale": "c"
+        "xlocale": "c",
+        "xtree": "cpp",
+        "utility": "cpp"
     }
 }
