@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "compilerPath": "D:/mingw64/bin/g++.exe",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/mingw64/include",
+                "D:/OpenCV/opencv_build_cmake/install/include",
+                "D:/OpenCV/opencv_build_cmake/install/include/opencv2"
+    
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
