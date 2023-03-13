@@ -1,6 +1,6 @@
 #include<vector>
 #include<map>
-#include<bits/stdc++>
+#include "../stdc++.h"
 using namespace std;
 
 class Solution {
@@ -12,10 +12,10 @@ public:
             indices[arr[i]] = i;
         }
         int ans = 0;
-        // n*nµÄ¶şÎ¬Êı×é
+        // n*nçš„äºŒç»´æ•°ç»„
         vector<vector<int>> dp(n, vector<int>(n));
         
-        // ¶şÎ¬Êı×é³õÊ¼»¯ÎªÁã
+        // äºŒç»´æ•°ç»„åˆå§‹åŒ–ä¸ºé›¶
         for(int i = 0;i < n;i++) {
             for (int j = 0;j < n;j++) {
                 dp[i][j] = 0;   
