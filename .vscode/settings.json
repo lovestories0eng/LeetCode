@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.fontFamily": "MesloLGS NF",
     "files.associations": {
         "map": "cpp",
         "__bit_reference": "cpp",
@@ -73,6 +74,9 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "utility": "cpp"
     }
 }
