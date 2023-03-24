@@ -4,6 +4,7 @@ using namespace std;
 // TODO：AC自动机
 // https://oi-wiki.org/string/ac-automaton/
 // https://blog.csdn.net/bestsort/article/details/82947639
+// AC自动机、KMP
 
 typedef struct TrieNode {
     vector<TrieNode *> children;
@@ -69,17 +70,18 @@ public:
                     node->children[i] = node->fail->children[i];
                 }
             }
-            /*
-              bfs算法遍历
-              在当前层遍历完之后的状态：
-            */
         }
 
         temp = root;
     }
     
     bool query(char letter) {
-        // 会通过失配指针指回去
+        /*
+          基本思想：
+            如果当前字符匹配没有结果，则找到当前字符匹配的最长后缀进行匹配
+          如何构建失配指针？
+            通过BFS广度优先遍历，类似动态规划，每一层遍历完之后，该层所有节点的失配指针指向的都是最大后缀，通过数学归纳法可证明。
+        */
         temp = temp->children[letter - 'a'];
         return temp->isEnd;
     }
