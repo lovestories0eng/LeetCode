@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='box' style="width:400px; 
+        height: 200px;
+        line-height: 30px;
+        border: 1px solid #666666;
+        overflow:auto;"> 
+    </div>
+</body>
+<script>
+    let str = '这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本是文本这是文本这是文本';
+    let box = document.getElementById('box');
+    H = box.offsetHeight;
+    for(i=0; i<str.length; i++){
+        box.innerHTML = str.substring(0,i);
+        if(H<box.scrollHeight){
+            box.style.overflow = 'hidden';
+            box.innerHTML = str.substring(0,i-3) + '...';
+            break;
+        }
+    }
+</script>
+</html>
